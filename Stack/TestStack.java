@@ -11,7 +11,12 @@ public class TestStack {
 			String choice = scanner.next();
 			switch(choice) {
 				case "a":
+					try {
 					s.push(scanner.next());
+					}
+					catch (MyStackOverflow exc) {
+						System.out.println("Stack pieno");
+					}
 					break;
 				case "r":
 					System.out.println(s.pop());

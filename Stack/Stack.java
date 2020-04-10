@@ -9,12 +9,12 @@ public class Stack {
 		array = new ArrayList<>();
 	}
 	
-	public void push(String s) {
+	public void push(String s) throws MyStackOverflow {
 		if(!isFull()) {
 			index++;
 			this.array.add(s);
 		} else {
-			//throw exception
+			throw new MyStackOverflow();
 		}
 	}
 	
